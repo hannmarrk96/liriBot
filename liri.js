@@ -22,12 +22,8 @@ function runliri(){
     }
     var Spotify = require('Spotify');
     var client = new Spotify ({
-     consumer_key: spotify.consumer_key,
-     consumer_secret: spotify.consumer_secret,
-     access_token_key: spotify.access_token_key,
-     access_token_secret: spotify.access_token_secret,
-     Client ID: spotify.Client ID,
-     Client Secret: spotify.Client Secret,
+     id: spotifyIDs.client_id,
+     secret: spotifyIDs.client_secret,
     });
     spotify.search({type: "track", query:query}, function (err,data) {
       if (err) {
@@ -53,8 +49,10 @@ function runliri(){
                     "/nCountry Produced: " + movie.Country + 
                     "/nLanguage: " + movie.Language + 
                     "/nPlot: " + movie.Plot + 
-                    "/nActors: " + movie.Actors
+                    "/nActors: " + movie.Actors)
     });
+      }
+    }
 
 
  if (option==="do-what-it-says") {
