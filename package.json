@@ -1,0 +1,24 @@
+{
+  "name": "liribot",
+  "version": "1.0.0",
+  "description": "homework liribot",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moniquebodique/liriBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moniquebodique/liriBot/issues"
+  },
+  "homepage": "https://github.com/moniquebodique/liriBot#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.83.0",
+    "twitter": "^1.7.1"
+  }
+}
