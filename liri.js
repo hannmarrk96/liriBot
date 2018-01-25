@@ -34,8 +34,8 @@ function runliri(){
         return console.log("Error");
       }
       console.log("Artists: " + data.tracks.items[0].artist[0].name + 
-        "/nSong Name:" + data.trim + data.tracks.items[0].preview_url + 
-        "/nAlbum: " + data.tracks.item[0].album.name);
+                  "/nSong Name:" + data.trim + data.tracks.items[0].preview_url + 
+                  "/nAlbum: " + data.tracks.item[0].album.name);
       });
 
     if (option === "movie-this") {
@@ -54,18 +54,7 @@ function runliri(){
                     "/nLanguage: " + movie.Language + 
                     "/nPlot: " + movie.Plot + 
                     "/nActors: " + movie.Actors
-
-        
-
-
-        }
-
-
-    }
-    })
-
-  
-
+    });
 
 
  if (option==="do-what-it-says") {
@@ -77,44 +66,3 @@ function runliri(){
 }
 
 
-inquirer.prompt([
-	{
-    type: "input",
-    name: "name",
-    message: "Who are you???"
-  },
-
-  {
-    type: "list",
-    name: "doingWhat",
-    message: "What are you doing in my house??",
-    choices: ["I made you cookies!", "No lie dude. I'm here to rob you.", "Uh. This is my house... Who are YOU???"]
-  },
-
-  {
-    type: "checkbox",
-    name: "carryingWhat",
-    message: "What are you carrying in your hands??",
-    choices: ["TV", "Slice of Toast", "Butter Knife"]
-  },
-
-  {
-    type: "confirm",
-    name: "canLeave",
-    message: "Can you leave now?"
-  },
-
-  {
-    type: "password",
-    name: "myPassword",
-    message: "Okay fine. You can stay. But only if you say the magic password."
-  }
-
-
-.then(function(location) {
-geocoder.geocode(location.userInput, function(err, data) {
-
-
-  console.log(JSON.stringify(data, null, 2));
-});
-});
